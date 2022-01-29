@@ -1,4 +1,5 @@
 import java.util.Locale;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -18,6 +19,8 @@ public class App {
         Locale.setDefault(Locale.US);
         System.out.printf("%s tem %d anos e ganha R$ %.4f reais%n", nome, idade, renda);
         teste(args);
+
+        scanner(args);
     }
 
     public static void teste(String[]args){
@@ -41,5 +44,17 @@ public class App {
         System.out.printf("Measue with eight decimal places: %.4f", measure);
         System.out.printf("(tree decimal places): %.3f", measure);
         System.out.printf("%.2f", measure);
+        return;
     }
+
+    public static void scanner(String[]args){
+        Scanner sc = new Scanner(System.in);
+
+        String x;
+        x = sc.next();
+        System.out.println("Voce digitou " + x);
+
+        sc.close();
+    }
+
 }
