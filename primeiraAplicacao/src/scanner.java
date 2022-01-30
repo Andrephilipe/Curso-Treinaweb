@@ -12,8 +12,14 @@ public class scanner {
         System.out.println("Qual a sua idade ?");
         idade = sc.nextInt();
 
-        System.out.printf("Ola %s%n sua idade é",x, + idade);
-        
+        System.out.printf("Ola %s%n ", x);
+        System.out.println("Você tem " + idade + " de idade");
+
+        double val;
+        System.out.println("Quanto você recebe por mÊs?");
+        val = sc.nextDouble();
+        System.out.printf("Você recebe %.2f", val);
+
         sc.close();
     }
 }
