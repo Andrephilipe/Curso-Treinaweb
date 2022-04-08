@@ -1,49 +1,30 @@
-<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:th="http://www.thymeleaf.org">
-<html>
-	<head>
-	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-	  <link rel="stylesheet" href="estilo.css">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	</head>
-	<body ng-app="myApp">
-		<h1>Portal Acadêmico.: </h1>
-		<nav id="menu">
-			<ul>
-				<li><a href="pessoa/cadastro.html">Cadastro de pessoa</a></li>
-				<li><a href="addAluno/addAluno.html">Cadastrar aluno</a></li>
-				<li><a href="addTurma/addTurma.html">Adicionar turma</a></li>
-				<li><a href="addDisciplina/addDisciplina.html">Adicionar disciplina</a></li>
-				<li><a href="matricular/matricularAluno.html">Matricular aluno</a></li>
-			</ul>
-		</nav>
-		<!--<div ng-controller="myController"> 
-			
-			<input type="button" value="Pegar dados" ng-click="getStudent()" />
-			<br />				
-			<br />
-			Response Data: {{data}} <br /> <br />
-					Error: {{error}}
-		</div>-->
-		<script>
-		    var myApp = angular.module('myApp', []);
-	   	
-			myApp.controller("myController", function ($scope, $http) {
-				var onSuccess = function successCallback(response) {$scope.data = response.data;}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-				var onError = function errorCallback(response) {$scope.error = response;}
-			
-			    var getReq = {
-						method  : 'GET',
-						url     : 'http://localhost:8080/pessoa'
-					};
-							
-				$scope.getStudent = function () {
-					$http(getReq).then(onSuccess, onError);
-				};
+  <title>Spring Fundamentos</title>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TWClientes</a>
+    </div>
+  </nav>
 
-			});
-		</script>
+  <main class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Olá, Treinaweb</h1>
+      </div>
+    </div>
+  </main>
 
-	</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
 </html>
